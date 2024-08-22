@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block page %}Secure Sign-Up{% endblock %}
+
+{% block style %}register_style{% endblock %}
+
+{% block content %}
+  <div class="contain">
+    <h1>Create an Account!</h1>
+    <p>This is where we create an account:</p>
+    <form method="post" action="register">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" value="submit">
+    </form>
+    <div>{{ message }}</div> 
+  </div>
+{% endblock %}

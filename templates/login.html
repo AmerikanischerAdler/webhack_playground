@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block page %}Attack Login Page{% endblock %}
+
+{% block style %}login_style{% endblock %}
+
+{% block content %}
+  <div class="contain">
+    <h1>Vulnerable Login!</h1>
+    <p>Test XSS and SQL Payloads Here:</p>
+    <form method="post" action="login">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" value="submit">
+    </form>
+    <!-- Easy to XSS -->
+    <!-- 
+    <div>{{ message | safe }}</div>
+    -->
+    <!-- Harder to XSS -->
+    <div>{{ message }}</div> 
+  </div>
+{% endblock %}

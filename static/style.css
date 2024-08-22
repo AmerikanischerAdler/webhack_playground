@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide:wght@400&display=swap');
+
+*{
+    font-family: Audiowide, sans-serif;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 70px;
+    margin-bottom: 0;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 10vh;
+    color: #000;
+    font-size: 50px;
+    border: 3px white;
+    border-radius: 40px;
+    box-shadow: 8px 5px #000;
+}
+
+#xss {
+    background-color: #dd0000;
+}
+
+#xss:hover {
+    cursor: pointer;
+    background-color: #bb0000;
+}
+
+#xss:active {
+    cursor: pointer;
+    background-color: #880000;
+}
+
+#login {
+    background-color: #bb00ff;
+}
+
+#login:hover {
+    cursor: pointer;
+    background-color: #8800dd;
+}
+
+#login:active {
+    cursor: pointer;
+    background-color: #7700cc;
+}
+
+#register {
+    background-color: #3000ff;
+}
+
+#register:hover {
+    cursor: pointer;
+    background-color: #2200dd;
+}
+
+#register:active {
+    cursor: pointer;
+    background-color: #0000cc;
+}
+
+#redirect {
+    background-color: #00ff00;
+}
+
+#redirect:hover {
+    cursor: pointer;
+    background-color: #00dd00;
+}
+
+#redirect:active {
+    cursor: pointer;
+    background-color: #00cc00;
+}
+
+a {
+    text-decoration: none;
+    padding-top: 3%;
+}
+
+

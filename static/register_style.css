@@ -1,0 +1,33 @@
+#body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contain {
+    margin-top: -5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.contain h1 {
+    text-align: center;
+}
+
+.contain p, .contain form, .contain div {
+    margin-left: 17%;
+}
+
+.contain div {
+    margin-top: 5%;
+}
+
+

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block page %}XSS Me{% endblock %}
+
+{% block style %}xss_style{% endblock %}
+
+{% block content %}
+  <div class="contain">
+    <h1>XSS Me!</h1>
+    <p>Test Out Some XSS Payloads Here:</p>
+    <form method="post" action="xss-me">
+      <input type="text" name="xss_input" id="xss_in">
+      <input type="submit" value="submit">
+    </form>
+    <!-- Easy to XSS -->
+    <div>{{ user_input | safe }}</div>
+    <!-- Harder to XSS -->
+    <!-- 
+    <div>{{ user_input }}</div> 
+    -->
+  </div>
+{% endblock %}

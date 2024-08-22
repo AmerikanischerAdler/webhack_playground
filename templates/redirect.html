@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block page %}Open Redirect Vulnerability{% endblock %}
+
+{% block style %}redirect_style{% endblock %}
+
+{% block content %}
+  <div class="contain">
+    <h1>Open Redirect Vulnerability</h1>
+    <a href="/open?url=http://127.0.0.1:5000">
+      <img src="">
+    </a>
+    <form action="/open">
+      <label for="url">Redirect to:</label>
+      <input type="text" name="url" placeholder="Your URL">
+      <button type="submit">GO</button>
+    </form>
+  </div>
+{% endblock %}
