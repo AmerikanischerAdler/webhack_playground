@@ -11,37 +11,7 @@ A Local Web-Based Hacking Environment for Learning XSS, SSRF, etc.
 git clone https://github.com/AmerikanischerAdler/webhack_playground
 ```
 
-2) Install Dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-**TIP**: You may need to install pip
-
-3) Set Up MYSQL Environment Variable:
-
-Once you have created your mysql account, run this command in the terminal,
-substituting your own password for "mypassword":
-
-```bash
-echo 'export MYSQLPW="mypassword"' >> .bashrc
-```
-
-**TIP**: This implies that you are using bash as your current shell. If not, run
-the command, substituting your own shell config file for ".bashrc"
-
-4) Create MYSQL Database and Tables:
-
-Once you are logged into your mysql environment, enter:
-
-```mysql
-CREATE DATABASE mydb;
-CREATE TABLE users (user_id VARCHAR(255) PRIMARY KEY AUTO_INCREMENT, username
-VARCHAR(255), password VARCHAR(255));
-```
-
-5) Install Python
+2) Install Python:
 
 If python3 is not installed on your machine, run:
 
@@ -61,6 +31,49 @@ sudo apt update
 sudo apt install python3
 ```
 
+3) Set Up Virtual Environment:
+
+```bash
+pip3 install virtualenv
+python3 -m venv env
+source env/bin/activate
+```
+
+4) Install Dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+5) Terminate Virtual Environment:
+
+```bash 
+deactivate
+```
+
+6) Set Up MYSQL Environment Variable:
+
+Once you have created your mysql account, run this command in the terminal,
+substituting your own password for "mypassword":
+
+```bash
+echo 'export MYSQLPW="mypassword"' >> ~/.bashrc
+```
+
+**TIP**: This implies that you are using bash as your current shell. If not, run
+the command, substituting your own shell config file for ".bashrc"
+
+7) Create MYSQL Database and Tables:
+
+Once you are logged into your MYSQL environment, run the following commands:
+
+```mysql
+CREATE DATABASE mydb;
+USE mydb;
+CREATE TABLE users (user_id INT PRIMARY KEY AUTO_INCREMENT, username
+VARCHAR(255), password VARCHAR(255));
+```
+
 ## Usage
 
 1) Open Terminal
@@ -71,7 +84,20 @@ sudo apt install python3
 cd webhack_playground
 ```
 
-3) Start Flask App:
+3) Start Virtual Environment
+
+```bash
+python3 -m venv env
+source env/bin/activate
+```
+
+**TIP**: To terminate your virtual environment, run:
+
+```bash
+deactivate
+```
+
+4) Start Flask App:
 
 *This will spin up a local backend server*
 
@@ -79,13 +105,7 @@ cd webhack_playground
 python3 app.py
 ```
 
-If this doesn't work, try:
-
-```bash
-python3.11 app.py
-```
-
-**TIP**: You may need to install python3.11
+**TIP**: To terminate your local server, press CTRL-C
 
 4) Open Web Browser to New Tab or Window
 
@@ -94,4 +114,6 @@ python3.11 app.py
 You may be able to simply click this link: http://127.0.0.1:5000/
 
 ## Inspiration
-In Progress
+Grow the Cybersecurity Industry by allowing aspiring penetration testers to
+experiment with payloads and other attacks within the safety of their local
+machine. 
