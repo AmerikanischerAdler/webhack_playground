@@ -71,8 +71,7 @@ Once you are logged into your MYSQL environment, run the following commands:
 ```mysql
 CREATE DATABASE mydb;
 USE mydb;
-CREATE TABLE users (user_id INT PRIMARY KEY AUTO_INCREMENT, username
-VARCHAR(255), password VARCHAR(255));
+CREATE TABLE users (user_id INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(255), password VARCHAR(255));
 ```
 
 ## Usage
